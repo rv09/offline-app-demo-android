@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="space_from_bottom_edge_for_content_in_match_card">12dp</dimen>
+    <dimen name="space_from_bottom_edge_for_image_in_match_card">82dp</dimen>
+    <dimen name="spacing_between_content_in_match_card">12dp</dimen>
+    <dimen name="spacing_from_left_edge_for_content_in_match_card">16dp</dimen>
+    <dimen name="spacing_from_bottom_for_Image_content_in_macth_card">52dp</dimen>
+</resources>

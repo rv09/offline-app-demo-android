@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Offline App Challenge</string>
+    <string name="btn_negative_match_card">Decline</string>
+    <string name="btn_positive_match_card">Accept</string>
+</resources>

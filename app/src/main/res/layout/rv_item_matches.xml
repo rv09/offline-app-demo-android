@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.8"
+        app:cardUseCompatPadding="true"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_profile_pic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@id/top_of_button_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/top_of_button_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_end="@dimen/space_from_bottom_edge_for_image_in_match_card" />
+
+            <TextView
+                android:id="@+id/txt_negative_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_negative_match_card"
+                android:layout_marginTop="10dp"
+                android:layout_margin="@dimen/space_from_bottom_edge_for_content_in_match_card"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/txt_positive_button"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/txt_positive_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_positive_match_card"
+                app:layout_constraintBaseline_toBaselineOf="@id/txt_negative_button"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/txt_negative_button" />
+
+            <ImageView
+                android:id="@+id/iv_text_bg"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@+id/top_of_button_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/txt_name"
+                app:srcCompat="@drawable/bg_bottom_black_for_match_card" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_decline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                app:srcCompat="@drawable/ic_twotone_thumb_down_24"
+                app:layout_constraintStart_toStartOf="@id/txt_negative_button"
+                app:layout_constraintEnd_toEndOf="@id/txt_negative_button"
+                app:layout_constraintTop_toTopOf="@id/top_of_button_text"
+                app:layout_constraintBottom_toBottomOf="@id/top_of_button_text"/>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_accept"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                app:srcCompat="@drawable/ic_twotone_thumb_up_24"
+                app:layout_constraintStart_toStartOf="@id/txt_positive_button"
+                app:layout_constraintEnd_toEndOf="@id/txt_positive_button"
+                app:layout_constraintTop_toTopOf="@id/top_of_button_text"
+                app:layout_constraintBottom_toBottomOf="@id/top_of_button_text" />
+
+            <TextView
+                android:id="@+id/txt_country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_from_left_edge_for_content_in_match_card"
+                android:layout_marginBottom="@dimen/spacing_from_bottom_for_Image_content_in_macth_card"
+                android:textAppearance="@style/TextMatchCard.Country"
+                app:layout_constraintBottom_toTopOf="@+id/top_of_button_text"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="India" />
+
+            <TextView
+                android:id="@+id/txt_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_between_content_in_match_card"
+                android:textAppearance="@style/TextMatchCard.Age"
+                app:layout_constraintBottom_toTopOf="@id/txt_country"
+                app:layout_constraintStart_toStartOf="@id/txt_country"
+                tools:text="29" />
+
+            <TextView
+                android:id="@+id/txt_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_between_content_in_match_card"
+                android:textAppearance="@style/TextMatchCard.Name"
+                app:layout_constraintBottom_toTopOf="@id/txt_age"
+                app:layout_constraintStart_toStartOf="@id/txt_country"
+                tools:text="Firstname Lastname" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
